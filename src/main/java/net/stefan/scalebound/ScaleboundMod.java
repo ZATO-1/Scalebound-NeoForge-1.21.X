@@ -34,6 +34,15 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+//new import
+import net.stefan.scalebound.item.ModItems;
+import net.stefan.scalebound.block.ModBlocks;
+import net.stefan.scalebound.blockentity.ModBlockEntities;
+import net.stefan.scalebound.menu.ModMenus;
+
+
+
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(ScaleboundMod.MOD_ID)
 public class ScaleboundMod {
@@ -66,16 +75,21 @@ public class ScaleboundMod {
                 output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
             }).build());
 
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
+    // The CONSTRUCTOR for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public ScaleboundMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
-        ITEMS.register(modEventBus);
+        ModItems.ITEMS.register(modEventBus);
+        // Register the
+        ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+        //
+        ModMenus.MENUS.register(modEventBus);
+
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
