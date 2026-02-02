@@ -10,6 +10,7 @@ import net.stefan.scalebound.ScaleboundMod;
 import net.stefan.scalebound.block.ModBlocks;
 
 public final class ModItems {
+    private ModItems() {}
 
     public static final DeferredRegister.Items ITEMS =
             DeferredRegister.createItems(ScaleboundMod.MOD_ID);
@@ -26,6 +27,10 @@ public final class ModItems {
     public static  final DeferredItem<Item> AMETHYST_DUST =
             ITEMS.registerSimpleItem("amethyst_dust", new Item.Properties().stacksTo(64));
 
+    // Raw silver acting like all the other ores
+    public static  final DeferredItem<Item> RAW_SILVER =
+            ITEMS.registerSimpleItem("raw_silver", new Item.Properties().stacksTo(64));
+
     public static final DeferredItem<Item> MECHANICAL_ARM =
             ITEMS.register("mechanical_arm",
                     () -> new MechanicalArmItem(new Item.Properties()
@@ -37,6 +42,9 @@ public final class ModItems {
     // BlockItem for the workbench (so you can place it)
     public static final DeferredItem<BlockItem> ARM_WORKBENCH_ITEM =
             ITEMS.registerSimpleBlockItem("arm_workbench", ModBlocks.ARM_WORKBENCH);
+
+    public static final DeferredItem<BlockItem> SILVER_BLOCK =
+            ITEMS.registerSimpleBlockItem("silver_block", ModBlocks.SILVER_BLOCK);
 
 
     public static void register(IEventBus eventBus) {

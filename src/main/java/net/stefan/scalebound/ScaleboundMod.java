@@ -1,5 +1,6 @@
 package net.stefan.scalebound;
 
+import net.stefan.scalebound.item.ModCreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -61,17 +62,16 @@ public class ScaleboundMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+        // Register the Deferred Register to the mod event bus so blocks, items, block entities) get registered
         ModBlocks.BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         ModItems.ITEMS.register(modEventBus);
-        // Register the
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
+
         //
         ModMenus.MENUS.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so tabs get registered
-        CREATIVE_MODE_TABS.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -93,6 +93,9 @@ public class ScaleboundMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItems.MECHANICAL_ARM);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.SILVER_BLOCK);
         }
     }
 

@@ -2,5 +2,7 @@
   "itemGroup.examplemod": "Example Mod Tab",
   "block.examplemod.example_block": "Example Block",
 
-  "item.scalemod.amethyst_dust": "Amethyst Dust"
+  "item.scalemod.amethyst_dust": "Amethyst Dust",
+
+  "creative_mode.dust_tab.title": "Scalebound"
 }
