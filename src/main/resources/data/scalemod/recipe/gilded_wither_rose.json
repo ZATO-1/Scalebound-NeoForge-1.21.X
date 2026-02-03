@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G":  {
+      "item": "minecraft:gold_block"
+    },
+
+    "R":  {
+      "item": "minecraft:wither_rose"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "GRG",
+    "GGG"
+  ],
+
+  "result": {
+    "count": 1,
+    "id": "scalemod:gilded_wither_rose"
+  }
+}
