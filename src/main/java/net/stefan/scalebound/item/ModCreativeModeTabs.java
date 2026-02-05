@@ -18,7 +18,24 @@ public class ModCreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.AMETHYST_DUST.get()))
                     .title(Component.translatable("creative_mode.dust_tab.title"))
                     .displayItems((itemDisplayParameters, output) ->{
+
                         output.accept(ModItems.AMETHYST_DUST);
+                        output.accept(ModItems.SILVER_HAMMER);
+                        output.accept(ModItems.ARM_WORKBENCH_ITEM);
+
+                        output.accept(ModItems.MARIONETTE_HEAD);
+                        output.accept(ModItems.MARIONETTE_CORE);
+                        output.accept(ModItems.MARIONETTE_HEART);
+
+                        output.accept(ModItems.LEAD_BLOCK);
+                        output.accept(ModItems.LEAD_ORE);
+                        output.accept(ModItems.SILVER_BLOCK);
+                        output.accept(ModItems.SILVER_ORE);
+                        output.accept(ModItems.RAW_LEAD);
+                        output.accept(ModItems.RAW_SILVER);
+
+                        output.accept(ModItems.GILDED_WITHER_ROSE_BLOCK);
+                        output.accept(ModItems.ROTTEN_LEATHER);
 
                     }).build());
 

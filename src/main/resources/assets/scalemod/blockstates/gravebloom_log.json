@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "axis=x": { "model": "scalemod:block/gravebloom_log_horizontal", "x": 90, "y": 90 },
+    "axis=y": { "model": "scalemod:block/gravebloom_log" },
+    "axis=z": { "model": "scalemod:block/gravebloom_log_horizontal", "x": 90 }
+  }
+}

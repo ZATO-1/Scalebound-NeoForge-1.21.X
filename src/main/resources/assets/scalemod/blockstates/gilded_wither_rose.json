@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": { "model": "scalemod:block/gilded_wither_rose" },
+    "stage=1": { "model": "scalemod:block/gilded_wither_rose" },
+    "stage=2": { "model": "scalemod:block/gilded_wither_rose" },
+    "stage=3": { "model": "scalemod:block/gilded_wither_rose" },
+    "stage=4": { "model": "scalemod:block/gilded_wither_rose" },
+    "stage=5": { "model": "scalemod:block/gilded_wither_rose" }
+  }
+}

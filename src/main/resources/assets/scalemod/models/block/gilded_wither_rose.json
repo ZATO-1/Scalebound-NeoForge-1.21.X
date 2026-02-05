@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "scalemod:block/gilded_wither_rose"
+  }
+}

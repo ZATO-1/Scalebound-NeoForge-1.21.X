@@ -98,7 +98,7 @@ public class GildedWitherRoseBlock extends BushBlock {
     }
 
     private static void spawnEssence(ServerLevel level, BlockPos pos) {
-        ItemStack drop = new ItemStack(ModItems.WITHER_ESSENCE.get());
+        ItemStack drop = new ItemStack(ModItems.NECROTIC_ICHOR.get());
 
         double x = pos.getX() + 0.5;
         double y = pos.getY() + 0.8;

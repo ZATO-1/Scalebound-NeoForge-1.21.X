@@ -4,6 +4,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.stefan.scalebound.ScaleboundMod;
@@ -22,23 +23,37 @@ public final class ModItems {
     public static  final DeferredItem<Item> AMETHYST_DUST =
             ITEMS.registerSimpleItem("amethyst_dust", new Item.Properties().stacksTo(64));
 
+
+
     // Amo for the combat module
     public static final DeferredItem<Item> BOLT =
             ITEMS.registerSimpleItem("bolt", new Item.Properties().stacksTo(16));
 
-    public static final DeferredItem<Item> WITHER_ESSENCE =
-            ITEMS.registerSimpleItem("wither_essence", new Item.Properties().stacksTo(64));
+    public static final DeferredItem<Item> NECROTIC_ICHOR =
+            ITEMS.registerSimpleItem("necrotic_ichor", new Item.Properties().stacksTo(16));
+
+                                    //======ARMOR======//
+
+    public static final DeferredItem<Item> ROTTEN_LEATHER =
+            ITEMS.registerSimpleItem("rotten_leather", new Item.Properties().stacksTo(64));
+
+
+
+                                //======MARIONETTE======//
+
+    public static final DeferredItem<Item> MARIONETTE_HEART =
+            ITEMS.registerSimpleItem("marionette_heart", new Item.Properties().stacksTo(1));
 
 
 
                                 //======ADVANCED ITEMS======//
 
-    public static final DeferredItem<Item> GILDED_WITHER_ROSE =
-            ITEMS.registerSimpleItem("gilded_wither_rose", new Item.Properties().stacksTo(1));
+    //public static final DeferredItem<Item> GILDED_WITHER_ROSE =
+            //ITEMS.registerSimpleItem("gilded_wither_rose", new Item.Properties().stacksTo(1));
 
     // Hammer used to turn amethyst into amethyst dust
-    public static final DeferredItem<Item> HAMMER =
-            ITEMS.registerSimpleItem("hammer", new Item.Properties().stacksTo(1));
+    public static final DeferredItem<Item> SILVER_HAMMER =
+            ITEMS.registerSimpleItem("silver_hammer", new Item.Properties().stacksTo(1));
 
                                 //======MECHANICAL ARM======//
 
@@ -85,9 +100,23 @@ public final class ModItems {
     public static final DeferredItem<BlockItem> LEAD_BLOCK =
             ITEMS.registerSimpleBlockItem("lead_block", ModBlocks.LEAD_BLOCK);
 
-    //public static final DeferredItem<BlockItem> GILDED_WITHER_ROSE_BLOCK =
-            //ITEMS.registerSimpleBlockItem("gilded_wither_rose", ModBlocks.GILDED_WITHER_ROSE);
+    public static final DeferredItem<BlockItem> GILDED_WITHER_ROSE_BLOCK =
+            ITEMS.registerSimpleBlockItem("gilded_wither_rose", ModBlocks.GILDED_WITHER_ROSE);
 
+    public static final DeferredItem<BlockItem> MARIONETTE_CORE =
+            ITEMS.registerSimpleBlockItem("marionette_core", ModBlocks.MARIONETTE_CORE);
+
+    public static final DeferredItem<BlockItem> MARIONETTE_HEAD =
+            ITEMS.registerSimpleBlockItem("marionette_head", ModBlocks.MARIONETTE_HEAD);
+
+    public  static final DeferredItem<BlockItem> GRAVEBLOOM_SAPLING =
+            ITEMS.registerSimpleBlockItem("gravebloom_sapling", ModBlocks.GRAVEBLOOM_SAPLING);
+
+    public static final DeferredItem<BlockItem> GRAVEBLOOM_LOG_ITEM =
+            ITEMS.registerSimpleBlockItem("gravebloom_log", ModBlocks.GRAVEBLOOM_LOG);
+
+    public static final DeferredItem<BlockItem> GRAVEBLOOM_PLANKS_ITEM =
+            ITEMS.registerSimpleBlockItem("gravebloom_planks", ModBlocks.GRAVEBLOOM_PLANKS);
 
 
     public static void register(IEventBus eventBus) {

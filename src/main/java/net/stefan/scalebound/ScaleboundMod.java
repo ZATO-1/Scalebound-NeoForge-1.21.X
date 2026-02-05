@@ -1,6 +1,11 @@
 package net.stefan.scalebound;
 
+import net.stefan.scalebound.brewing.ModBrewingRecipes;
+import net.stefan.scalebound.entity.ModEntities;
+import net.stefan.scalebound.event.RefinedIchorInteractions;
 import net.stefan.scalebound.item.ModCreativeModeTabs;
+import net.stefan.scalebound.potion.ModPotions;
+
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -65,6 +70,13 @@ public class ScaleboundMod {
         // Register the Deferred Register to the mod event bus so blocks, items, block entities) get registered
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+
+        ModPotions.POTIONS.register(modEventBus);
+
+        NeoForge.EVENT_BUS.addListener(ModBrewingRecipes::register);
+        NeoForge.EVENT_BUS.addListener(RefinedIchorInteractions::onRightClickBlock);
+
+        ModEntities.ENTITIES.register(modEventBus);
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
 
         //
